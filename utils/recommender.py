@@ -1,5 +1,5 @@
 from langchain.embeddings import OpenAIEmbeddings
-from langchain.vectorstores import FAISS
+from langchain.vectorstores import Chroma
 from langchain.document_loaders import WebBaseLoader
 from langchain.text_splitter import RecursiveCharacterTextSplitter
 import requests
@@ -23,7 +23,7 @@ class ResourceRecommender:
             docs = text_splitter.split_documents(documents)
             
             if self.vectorstore is None:
-                self.vectorstore = FAISS.from_documents(docs, self.embeddings)
+                self.vectorstore = Chroma.from_documents(docs, self.embeddings)
             else:
                 self.vectorstore.add_documents(docs)
             
