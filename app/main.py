@@ -1,6 +1,7 @@
 import streamlit as st
+from quiz_generator import generate_quiz
 from file_parser import extract_text
-from app.quiz_generator import generate_quiz
+
 
 st.set_page_config(page_title="AI Quiz Generator", layout="centered")
 st.title("AI Quiz Generator")
