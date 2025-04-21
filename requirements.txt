@@ -3,3 +3,5 @@ transformers
 torch
 PyPDF2
 python-docx
+sentencepiece==0.1.99  # Required for T5 tokenizer
+protobuf==3.20.3 
