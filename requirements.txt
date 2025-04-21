@@ -1,5 +1,5 @@
 streamlit
-python-docx
-PyMuPDF
 transformers
 torch
+PyPDF2
+python-docx
